@@ -84,4 +84,5 @@ $RECYCLE.BIN/
 
 # End of https://www.gitignore.io/api/linux,macos,windows,visualstudiocode
 
-srs.log
+srs/srs.log
+ffmpeg/urls.txt

@@ -10,5 +10,9 @@ services:
       - ./srs/srs.conf:/usr/local/srs/conf/srs.conf
       - ./srs/srs.log:/usr/local/srs/objs/srs.log
   ffmpeg-bash:
-    image: jrottenberg/ffmpeg:4.2-alpine
-    
+    image: jrottenberg/ffmpeg:4.2-ubuntu
+    entrypoint: bash /app/streamer.sh
+    volumes:
+      - ./ffmpeg:/app
+    depends_on:
+      - srs
