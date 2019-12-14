@@ -1,0 +1,14 @@
+version: '3'
+services:
+  srs:
+    image: ossrs/srs:3
+    ports:
+      - 1935:1935
+      - 1985:1985
+      - 8080:8080
+    volumes:
+      - ./srs/srs.conf:/usr/local/srs/conf/srs.conf
+      - ./srs/srs.log:/usr/local/srs/objs/srs.log
+  ffmpeg-bash:
+    image: jrottenberg/ffmpeg:4.2-alpine
+    
