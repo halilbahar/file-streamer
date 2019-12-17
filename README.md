@@ -28,6 +28,11 @@ You can retrive the example above with this following URL as HLS:
 http://localhost:8080/file/example-stream.m3u8
 ```
 
+You also can get it as RTMP:
+
+```
+rtmp://localhost/file/example-stream
+```
 
 ## Start the server
 
