@@ -9,6 +9,7 @@ services:
     volumes:
       - ./srs/srs.conf:/usr/local/srs/conf/srs.conf
       - ./srs/srs.log:/usr/local/srs/objs/srs.log
+    restart: always
   ffmpeg-bash:
     image: jrottenberg/ffmpeg:4.2-centos
     working_dir: /app
@@ -18,3 +19,4 @@ services:
       - ./ffmpeg/urls.txt:/app/urls.txt
     depends_on:
       - srs
+    restart: always
